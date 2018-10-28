@@ -7,8 +7,6 @@ const make = (...args) => {
       return make.apply(null, [...args, ...next]);
     }
   }
-}
-               
+}            
 const sum = (a, b) => a + b;
-
 console.log(make(1)(2, 3)(4, 5)(6)(sum));
